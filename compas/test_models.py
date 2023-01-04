@@ -5,17 +5,62 @@ import tensorflow as tf
 # African_American,Asian,Hispanic,Native_American,Other, == 6 possible configs
 # Female,Misdemeanor == 2
 def get_test_data():
-    data = []
-    #            prio, scor  age      races             gender, misdemeanor
-    data.append([0, 0,       0, 0,    0, 0, 0, 0, 0,    0, 0])
-    data.append([0, 0,       1, 0,    0, 0, 0, 0, 0,    0, 0])
-    data.append([0, 0,       0, 1,    0, 0, 0, 0, 0,    0, 0])
+    data = {}
+    data['caucasian'] = [
+        #prio, scor  age      races             gender, misdemeanor
+        [0, 0,       0, 0,    0, 0, 0, 0, 0,    0, 0],
+        [0, 0,       1, 0,    0, 0, 0, 0, 0,    0, 0],
+        [0, 0,       0, 1,    0, 0, 0, 0, 0,    0, 0]
+    ]
+
+    data['african_american'] = [
+        #prio, scor  age      races             gender, misdemeanor
+        [0, 0,       0, 0,    1, 0, 0, 0, 0,    0, 0],
+        [0, 0,       1, 0,    1, 0, 0, 0, 0,    0, 0],
+        [0, 0,       0, 1,    1, 0, 0, 0, 0,    0, 0]
+    ]
+
+    data['asian'] = [
+        #prio, scor  age      races             gender, misdemeanor
+        [0, 0,       0, 0,    0, 1, 0, 0, 0,    0, 0],
+        [0, 0,       1, 0,    0, 1, 0, 0, 0,    0, 0],
+        [0, 0,       0, 1,    0, 1, 0, 0, 0,    0, 0]
+    ]
+
+    data['hispanic'] = [
+        #prio, scor  age      races             gender, misdemeanor
+        [0, 0,       0, 0,    0, 0, 1, 0, 0,    0, 0],
+        [0, 0,       1, 0,    0, 0, 1, 0, 0,    0, 0],
+        [0, 0,       0, 1,    0, 0, 1, 0, 0,    0, 0]
+    ]
+
+    data['native_american'] = [
+        #prio, scor  age      races             gender, misdemeanor
+        [0, 0,       0, 0,    0, 0, 0, 1, 0,    0, 0],
+        [0, 0,       1, 0,    0, 0, 0, 1, 0,    0, 0],
+        [0, 0,       0, 1,    0, 0, 0, 1, 0,    0, 0]
+    ]
+
+    data['other'] = [
+        #prio, scor  age      races             gender, misdemeanor
+        [0, 0,       0, 0,    0, 0, 0, 0, 1,    0, 0],
+        [0, 0,       1, 0,    0, 0, 0, 0, 1,    0, 0],
+        [0, 0,       0, 1,    0, 0, 0, 0, 1,    0, 0]
+    ]
+
+
+
 
     return data
 
-model = tf.keras.models.load_model('./models/baseline')
+# model = tf.keras.models.load_model('./models/baseline')
+# model = tf.keras.models.load_model('./models/norace')
+# model = tf.keras.models.load_model('./models/nogender')
 
 data = get_test_data()
-print(model.predict(data))
+
+for key, value in data.items():
+    print(key)
+    print(model.predict(value))
 
 print('Done analysis')
