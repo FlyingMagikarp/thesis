@@ -51,4 +51,7 @@ df = df.drop('MaritalStatus', axis=1)
 df['age'] = 122 - df['DateOfBirth'].str[-2:].astype(int)
 df = df.drop('DateOfBirth', axis=1)
 
+df.drop(df[df['DecileScore'] == -1].index, inplace=True)
+df['DecileScore'] = df['DecileScore'] - 1
+
 df.to_csv('data/clean_data.csv', encoding='utf-8', index=False)
