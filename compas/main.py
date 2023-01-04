@@ -13,9 +13,6 @@ df_female = df.loc[df['Male'] == 0]
 
 print(df_male[['DecileScore']].value_counts())
 
-plt.ylim(0, 100)
-plt.suptitle('African-American')
-
 df_male.drop(df_male[df_male['DecileScore'] == -1].index, inplace=True)
 df_male[['DecileScore']].value_counts(normalize=True).plot(kind='bar')
 plt.ylim(0, 1)
