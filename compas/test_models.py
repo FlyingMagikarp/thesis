@@ -53,14 +53,26 @@ def get_test_data():
 
     return data
 
-# model = tf.keras.models.load_model('./models/baseline')
-# model = tf.keras.models.load_model('./models/norace')
-# model = tf.keras.models.load_model('./models/nogender')
+#model = tf.keras.models.load_model('./models/baseline')
+#model = tf.keras.models.load_model('./models/norace')
+#model_type = 'norace'
+model = tf.keras.models.load_model('./models/nogender')
+model_type = 'nogender'
 
 data = get_test_data()
 
 for key, value in data.items():
     print(key)
+    if model_type == 'norace':
+        for v in value:
+            v.pop(4)
+            v.pop(4)
+            v.pop(4)
+            v.pop(4)
+            v.pop(4)
+    if model_type == 'nogender':
+        for v in value:
+            v.pop(9)
     print(model.predict(value))
 
 print('Done analysis')
