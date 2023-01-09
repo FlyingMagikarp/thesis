@@ -9,20 +9,31 @@
 Analysis is the same as with the old dataset
 
 - look at dispo and try that method to check impact of each field on model
+\/
+
 - logistic regression on new dataset
+\/
+
 - general analysis on new dataset
 	- metrics
-	- ratio male vs female
 	- ratio did rec vs not
 	- same ratio but gender specific
 	- same ratio but race and gender specific
 	- generate numbers in jupyter nb for later graph generation if needed
+/\ Done
+Have for all and for each gender:
+	- Ratio positive negative
+	- ratio of races to total
+	- ratio of positive for each race
+
 - expand test dataset
 	- make dict for easier removal of not needed fields(race, gender etc)
 	- more combinations
+\/
 
 - expand test script
 	- make it easier to compare output
+\/
 
 # Credit
 - repeat the same from compas, should be easy copy paste
