@@ -14,6 +14,9 @@ df = pd.concat([df, occup], axis=1)
 df = df.drop('occupation', axis=1)
 df = df.rename(columns={'MZ01CD': 'occupation0', 'MZ10CD': 'occupation1', 'MZ11CD': 'occupation2'})
 
+df['target'] = df['default'].astype(int)
+df = df.drop('default', axis=1)
+
 df.to_csv('../data/train_clean.csv', encoding='utf-8', index=False)
 
 #####
