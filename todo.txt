@@ -1,0 +1,28 @@
+### TODO ###
+# COMPAS
+- add caucasian field to dataset and retrain ai
+	- easiest way probably: separate into 2 df, white & non white
+	- add field with 1 to white and 0 to non white df
+	- combine
+	- to csv gg ez
+/\ Done
+Analysis is the same as with the old dataset
+
+- look at dispo and try that method to check impact of each field on model
+- logistic regression on new dataset
+- general analysis on new dataset
+	- metrics
+	- ratio male vs female
+	- ratio did rec vs not
+	- same ratio but gender specific
+	- same ratio but race and gender specific
+	- generate numbers in jupyter nb for later graph generation if needed
+- expand test dataset
+	- make dict for easier removal of not needed fields(race, gender etc)
+	- more combinations
+
+- expand test script
+	- make it easier to compare output
+
+# Credit
+- repeat the same from compas, should be easy copy paste
