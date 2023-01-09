@@ -30,11 +30,13 @@ Have for all and for each gender:
 - expand test dataset
 	- make dict for easier removal of not needed fields(race, gender etc)
 	- more combinations
-\/
+\/ WIP, testset now has caucasian in it, duplicated testset for female only
+thing left is priors and misdemeanors
+maybe change those values in model loop instead of duping whole dataset again
 
 - expand test script
 	- make it easier to compare output
-\/
+\/ needs a test run, but probably easier now
 
 # Credit
-- repeat the same from compas, should be easy copy paste
+- repeat the same from compas for other dataset, should be easy copy paste
