@@ -12,7 +12,8 @@ Analysis is the same as with the old dataset
 \/
 
 - logistic regression on new dataset
-\/
+/\ Done
+better result without 'score_factor'. better = more biased
 
 - general analysis on new dataset
 	- metrics
