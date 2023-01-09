@@ -40,4 +40,6 @@ df = df.rename(columns={'MZ01CD': 'occupation0', 'MZ10CD': 'occupation1', 'MZ11C
 df['target'] = df['default'].astype(int)
 df = df.drop('default', axis=1)
 
+df = df[['minority', 'sex', 'rent', 'education', 'age', 'income', 'loan_size', 'payment_timing', 'year', 'job_stability', 'zip0', 'zip1', 'zip2', 'zip3', 'occupation0', 'occupation1', 'occupation2', 'target']]
+
 df.to_csv('../data/test_clean.csv', encoding='utf-8', index=False)
