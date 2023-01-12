@@ -1,5 +1,17 @@
 #import tensorflow as tf
 
+def set_priors_in_list(dlist, nr_priors):
+    for i in dlist:
+        i[0] = nr_priors
+    return dlist
+
+
+def set_misdemeanor_in_list(dlist, nr_misd):
+    for i in dlist:
+        i[-1] = nr_misd
+    return dlist
+
+
 # Two_yr_Recidivism,Number_of_Priors,score_factor, == 3, score_factor might get removed
 # Age_Above_FourtyFive,Age_Below_TwentyFive, == 3 possible configs
 # African_American,Asian,Hispanic,Native_American,Other, == 6 possible configs, also 6 fields with new dataset
@@ -128,6 +140,9 @@ for model_info in models:
     print('##########')
     for key, value in data.items():
         print(key)
+        value = set_priors_in_list(value, 12)
+        value = set_misdemeanor_in_list(value, 1)
+        print(value)
         #print(model.predict(value))
     print('##########')
 
