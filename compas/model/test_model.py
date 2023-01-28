@@ -1,5 +1,7 @@
-#import tensorflow as tf
+import tensorflow as tf
+import sys
 
+sys.stdout = open('../results/compas_results.txt', 'w')
 def set_priors_in_list(dlist, nr_priors):
     for i in dlist:
         i[0] = nr_priors
@@ -22,87 +24,87 @@ def get_test_data(data_type):
     ### male
     data['caucasian_male'] = [
         #prio, scor  age      races             gender, misdemeanor
-        [0, 0,       0, 0,    1, 0, 0, 0, 0, 0,    0, 0],
-        [0, 0,       1, 0,    1, 0, 0, 0, 0, 0,    0, 0],
-        [0, 0,       0, 1,    1, 0, 0, 0, 0, 0,    0, 0]
+        [0,          0, 0,    1, 0, 0, 0, 0, 0,    0, 0],
+        [0,          1, 0,    1, 0, 0, 0, 0, 0,    0, 0],
+        [0,          0, 1,    1, 0, 0, 0, 0, 0,    0, 0]
     ]
 
     data['african_american_male'] = [
         #prio, scor  age      races             gender, misdemeanor
-        [0, 0,       0, 0,    0, 1, 0, 0, 0, 0,    0, 0],
-        [0, 0,       1, 0,    0, 1, 0, 0, 0, 0,    0, 0],
-        [0, 0,       0, 1,    0, 1, 0, 0, 0, 0,    0, 0]
+        [0,          0, 0,    0, 1, 0, 0, 0, 0,    0, 0],
+        [0,          1, 0,    0, 1, 0, 0, 0, 0,    0, 0],
+        [0,          0, 1,    0, 1, 0, 0, 0, 0,    0, 0]
     ]
 
     data['asian_male'] = [
         #prio, scor  age      races             gender, misdemeanor
-        [0, 0,       0, 0,    0, 0, 1, 0, 0, 0,    0, 0],
-        [0, 0,       1, 0,    0, 0, 1, 0, 0, 0,    0, 0],
-        [0, 0,       0, 1,    0, 0, 1, 0, 0, 0,    0, 0]
+        [0,          0, 0,    0, 0, 1, 0, 0, 0,    0, 0],
+        [0,          1, 0,    0, 0, 1, 0, 0, 0,    0, 0],
+        [0,          0, 1,    0, 0, 1, 0, 0, 0,    0, 0]
     ]
 
     data['hispanic_male'] = [
         #prio, scor  age      races             gender, misdemeanor
-        [0, 0,       0, 0,    0, 0, 0, 1, 0, 0,    0, 0],
-        [0, 0,       1, 0,    0, 0, 0, 1, 0, 0,    0, 0],
-        [0, 0,       0, 1,    0, 0, 0, 1, 0, 0,    0, 0]
+        [0,          0, 0,    0, 0, 0, 1, 0, 0,    0, 0],
+        [0,          1, 0,    0, 0, 0, 1, 0, 0,    0, 0],
+        [0,          0, 1,    0, 0, 0, 1, 0, 0,    0, 0]
     ]
 
     data['native_american_male'] = [
         #prio, scor  age      races             gender, misdemeanor
-        [0, 0,       0, 0,    0, 0, 0, 0, 1, 0,    0, 0],
-        [0, 0,       1, 0,    0, 0, 0, 0, 1, 0,    0, 0],
-        [0, 0,       0, 1,    0, 0, 0, 0, 1, 0,    0, 0]
+        [0,          0, 0,    0, 0, 0, 0, 1, 0,    0, 0],
+        [0,          1, 0,    0, 0, 0, 0, 1, 0,    0, 0],
+        [0,          0, 1,    0, 0, 0, 0, 1, 0,    0, 0]
     ]
 
     data['other_male'] = [
         #prio, scor  age      races             gender, misdemeanor
-        [0, 0,       0, 0,    0, 0, 0, 0, 0, 1,    0, 0],
-        [0, 0,       1, 0,    0, 0, 0, 0, 0, 1,    0, 0],
-        [0, 0,       0, 1,    0, 0, 0, 0, 0, 1,    0, 0]
+        [0,          0, 0,    0, 0, 0, 0, 0, 1,    0, 0],
+        [0,          1, 0,    0, 0, 0, 0, 0, 1,    0, 0],
+        [0,          0, 1,    0, 0, 0, 0, 0, 1,    0, 0]
     ]
 
     ### female
     data['caucasian_female'] = [
         # prio, scor  age      races             gender, misdemeanor
-        [0, 0,        0, 0,   1, 0, 0, 0, 0, 0,     1, 0],
-        [0, 0,        1, 0,   1, 0, 0, 0, 0, 0,     1, 0],
-        [0, 0,        0, 1,   1, 0, 0, 0, 0, 0,     1, 0]
+        [0,           0, 0,   1, 0, 0, 0, 0, 0,     1, 0],
+        [0,           1, 0,   1, 0, 0, 0, 0, 0,     1, 0],
+        [0,           0, 1,   1, 0, 0, 0, 0, 0,     1, 0]
     ]
 
     data['african_american_female'] = [
         # prio, scor  age      races             gender, misdemeanor
-        [0, 0,        0, 0,   0, 1, 0, 0, 0, 0,     1, 0],
-        [0, 0,        1, 0,   0, 1, 0, 0, 0, 0,     1, 0],
-        [0, 0,        0, 1,   0, 1, 0, 0, 0, 0,     1, 0]
+        [0,           0, 0,   0, 1, 0, 0, 0, 0,     1, 0],
+        [0,           1, 0,   0, 1, 0, 0, 0, 0,     1, 0],
+        [0,           0, 1,   0, 1, 0, 0, 0, 0,     1, 0]
     ]
 
     data['asian_female'] = [
         # prio, scor  age      races             gender, misdemeanor
-        [0, 0,        0, 0,   0, 0, 1, 0, 0, 0,     1, 0],
-        [0, 0,        1, 0,   0, 0, 1, 0, 0, 0,     1, 0],
-        [0, 0,        0, 1,   0, 0, 1, 0, 0, 0,     1, 0]
+        [0,           0, 0,   0, 0, 1, 0, 0, 0,     1, 0],
+        [0,           1, 0,   0, 0, 1, 0, 0, 0,     1, 0],
+        [0,           0, 1,   0, 0, 1, 0, 0, 0,     1, 0]
     ]
 
     data['hispanic_female'] = [
         # prio, scor  age      races             gender, misdemeanor
-        [0, 0,        0, 0,   0, 0, 0, 1, 0, 0,     1, 0],
-        [0, 0,        1, 0,   0, 0, 0, 1, 0, 0,     1, 0],
-        [0, 0,        0, 1,   0, 0, 0, 1, 0, 0,     1, 0]
+        [0,           0, 0,   0, 0, 0, 1, 0, 0,     1, 0],
+        [0,           1, 0,   0, 0, 0, 1, 0, 0,     1, 0],
+        [0,           0, 1,   0, 0, 0, 1, 0, 0,     1, 0]
     ]
 
     data['native_american_female'] = [
         # prio, scor  age      races             gender, misdemeanor
-        [0, 0,        0, 0,   0, 0, 0, 0, 1, 0,     1, 0],
-        [0, 0,        1, 0,   0, 0, 0, 0, 1, 0,     1, 0],
-        [0, 0,        0, 1,   0, 0, 0, 0, 1, 0,     1, 0]
+        [0,           0, 0,   0, 0, 0, 0, 1, 0,     1, 0],
+        [0,           1, 0,   0, 0, 0, 0, 1, 0,     1, 0],
+        [0,           0, 1,   0, 0, 0, 0, 1, 0,     1, 0]
     ]
 
     data['other_female'] = [
         # prio, scor  age      races             gender, misdemeanor
-        [0, 0,        0, 0,   0, 0, 0, 0, 0, 1,     1, 0],
-        [0, 0,        1, 0,   0, 0, 0, 0, 0, 1,     1, 0],
-        [0, 0,        0, 1,   0, 0, 0, 0, 0, 1,     1, 0]
+        [0,           0, 0,   0, 0, 0, 0, 0, 1,     1, 0],
+        [0,           1, 0,   0, 0, 0, 0, 0, 1,     1, 0],
+        [0,           0, 1,   0, 0, 0, 0, 0, 1,     1, 0]
     ]
 
 
@@ -126,24 +128,28 @@ def get_test_data(data_type):
 
     return data
 
-models = [{'model': "tf.keras.models.load_model('./models/baseline')", 'model_type': 'baseline'},
-          {'model': "tf.keras.models.load_model('./models/norace')", 'model_type': 'norace'},
-          {'model': "tf.keras.models.load_model('./models/nogender')", 'model_type': 'nogender'}]
+models = [{'model': tf.keras.models.load_model('./models/baseline'), 'model_type': 'baseline'},
+          {'model': tf.keras.models.load_model('./models/norace'), 'model_type': 'norace'},
+          {'model': tf.keras.models.load_model('./models/nogender'), 'model_type': 'nogender'}]
 
-for model_info in models:
-    model = model_info['model']
-    type = model_info['model_type']
 
-    data = get_test_data(type)
+for i in range(6):
+    for j in range(6):
+        for model_info in models:
+            model = model_info['model']
+            type = model_info['model_type']
 
-    print('Model: ', type)
-    print('##########')
-    for key, value in data.items():
-        print(key)
-        value = set_priors_in_list(value, 12)
-        value = set_misdemeanor_in_list(value, 1)
-        print(value)
-        #print(model.predict(value))
-    print('##########')
+            data = get_test_data(type)
+
+            print('Model: ', type)
+            print('##########')
+            for key, value in data.items():
+                print(key)
+                value = set_priors_in_list(value, i)
+                value = set_misdemeanor_in_list(value, j)
+                print(value)
+                print(model.predict(value))
+            print('##########')
 
 print('Done analysis')
+sys.stdout.close()

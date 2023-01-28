@@ -6,16 +6,19 @@ print("TensorFlow version:", tf.__version__)
 
 #df = pd.read_csv('./data/clean_data.csv')
 #df = pd.read_csv('./data/propublica_data_for_fairml.csv')
-df = pd.read_csv('../data/propublic_double.csv')
+#df = pd.read_csv('../data/propublic_double.csv')
+df = pd.read_csv('../data/double_data_with_caucasian.csv')
 print(df.head())
 print(df.dtypes)
 
 # African_American,Asian,Hispanic,Native_American,Other
 df = df.drop('African_American', axis=1)
+df = df.drop('Caucasian', axis=1)
 df = df.drop('Asian', axis=1)
 df = df.drop('Hispanic', axis=1)
 df = df.drop('Native_American', axis=1)
 df = df.drop('Other', axis=1)
+z = df.pop('score_factor')
 y = df.pop('Two_yr_Recidivism')
 X = df
 
@@ -26,7 +29,7 @@ X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.2, random_sta
 
 model = tf.keras.models.Sequential()
 
-model.add(tf.keras.layers.Dense(11, activation='relu', input_shape=(6,)))
+model.add(tf.keras.layers.Dense(5, activation='relu', input_shape=(5,)))
 
 model.add(tf.keras.layers.Dense(40, activation='relu'))
 model.add(tf.keras.layers.Dense(40, activation='relu'))
