@@ -1,7 +1,8 @@
 import tensorflow as tf
+from datetime import datetime
 import sys
 
-sys.stdout = open('../results/compas_results.txt', 'w')
+#sys.stdout = open('../results/compas_results.txt', 'w')
 def set_priors_in_list(dlist, nr_priors):
     for i in dlist:
         i[0] = nr_priors
@@ -128,13 +129,40 @@ def get_test_data(data_type):
 
     return data
 
-models = [{'model': tf.keras.models.load_model('./models/baseline'), 'model_type': 'baseline'},
-          {'model': tf.keras.models.load_model('./models/norace'), 'model_type': 'norace'},
-          {'model': tf.keras.models.load_model('./models/nogender'), 'model_type': 'nogender'}]
+
+def init_logfile():
+    date = datetime.now()
+    time_suffix = str(date.year) + '-' + str(date.month) + '-' + str(date.day) + '-' + str(date.hour) + '-' + str(date.minute) + '-' + str(date.second)
+    filename = '../results/compas_results_baseline_{}.txt'.format(time_suffix)
+    with open(filename, 'w') as f:
+        f.write(time_suffix + '\n')
+    return filename
 
 
-for i in range(6):
-    for j in range(6):
+def log_string(filename, string):
+    with open(filename, 'a') as f:
+        f.write(string)
+        f.write('\n')
+
+
+def log_predictions(filename, preds):
+    with open(filename, 'a') as f:
+        f.write('25+' + str(preds[0])+'\n')
+        f.write('45+' + str(preds[1])+'\n')
+        f.write('18+' + str(preds[2])+'\n')
+
+start_time = datetime.now()
+
+models = [
+    {'model': tf.keras.models.load_model('./models/baseline'), 'model_type': 'baseline'}#,
+    #{'model': tf.keras.models.load_model('./models/norace'), 'model_type': 'norace'},
+    #{'model': tf.keras.models.load_model('./models/nogender'), 'model_type': 'nogender'}
+]
+
+fn = init_logfile()
+for i in range(4):
+    for j in range(4):
+        log_string(fn, '#'+str(i)+'-'+str(j)+'#')
         for model_info in models:
             model = model_info['model']
             type = model_info['model_type']
@@ -142,14 +170,24 @@ for i in range(6):
             data = get_test_data(type)
 
             print('Model: ', type)
+            log_string(fn, 'Model: '+type)
             print('##########')
+            log_string(fn, '##########')
             for key, value in data.items():
                 print(key)
+                log_string(fn, key)
                 value = set_priors_in_list(value, i)
                 value = set_misdemeanor_in_list(value, j)
                 print(value)
+                predictions = model.predict(value)
+                log_predictions(fn, predictions)
                 print(model.predict(value))
+                log_string(fn, '###')
             print('##########')
+            log_string(fn, '##########')
+            log_string(fn, '##########')
 
 print('Done analysis')
-sys.stdout.close()
+print('Time:')
+print(datetime.now() - start_time)
+#sys.stdout.close()

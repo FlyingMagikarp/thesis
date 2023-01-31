@@ -1,0 +1,26 @@
+Baseline
+FEMALE
+0-0
+Weiss 				& 0 & 0 & 0.230 & 0.352 & 0.268 \\
+Afroamerikaner 			& 0 & 0 & 0.348 & 0.237 & 0.211 \\
+Asiaten				& 0 & 0 & 0.008 & 0.002 & 0.012 \\
+Latinoamerikaner		& 0 & 0 & 0.313 & 0.210 & 0.220 \\
+Amerkianische Ureinwohner	& 0 & 0 & 0.180 & 0.101 & 0.144 \\
+Andere 				& 0 & 0 & 0.028 & 0.044 & 0.127 \\
+
+0-1
+Weiss 				& 0 & 0 & 0.088 & 0.133 & 0.142 \\
+Afroamerikaner 			& 0 & 0 & 0.352 & 0.195 & 0.192 \\
+Asiaten				& 0 & 0 & 0.000 & 0.000 & 0.000 \\
+Latinoamerikaner		& 0 & 0 & 0.309 & 0.147 & 0.115 \\
+Amerkianische Ureinwohner	& 0 & 0 & 0.085 & 0.029 & 0.060 \\
+Andere 				& 0 & 0 & 0.049 & 0.027 & 0.031 \\
+
+0-2
+Weiss 				& 0 & 0 & 0.023 & 0.019 & 0.057 \\
+Afroamerikaner 			& 0 & 0 & 0.245 & 0.104 & 0.116 \\
+Asiaten				& 0 & 0 & 0.000 & 0.000 & 0.000 \\
+Latinoamerikaner		& 0 & 0 & 0.068 & 0.021 & 0.042 \\
+Amerkianische Ureinwohner	& 0 & 0 & 0.031 & 0.005 & 0.008 \\
+Andere 				& 0 & 0 & 0.014 & 0.006 & 0.007 \\
+
