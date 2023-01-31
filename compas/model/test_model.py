@@ -160,8 +160,8 @@ models = [
 ]
 
 fn = init_logfile()
-for i in range(6):
-    for j in range(6):
+for i in range(4):
+    for j in range(4):
         log_string(fn, '#'+str(i)+'-'+str(j)+'#')
         for model_info in models:
             model = model_info['model']
