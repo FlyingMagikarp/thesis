@@ -1,0 +1,133 @@
+No Gender
+
+0-0
+Weiss 				& 0 & 0 & 0.381 & 0.303 & 0.313 \\
+Afroamerikaner 			& 0 & 0 & 0.461 & 0.284 & 0.279 \\
+Asiaten				& 0 & 0 & 0.460 & 0.015 & 0.096 \\
+Latinoamerikaner		& 0 & 0 & 0.461 & 0.186 & 0.143 \\
+Amerkianische Ureinwohner	& 0 & 0 & 0.535 & 0.208 & 0.313 \\
+Andere 				& 0 & 0 & 0.465 & 0.292 & 0.215 \\
+
+0-1
+Weiss 				& 0 & 0 & 0.374 & 0.226 & 0.140 \\
+Afroamerikaner 			& 0 & 0 & 0.485 & 0.287 & 0.204 \\
+Asiaten				& 0 & 0 & 0.040 & 0.003 & 0.005 \\
+Latinoamerikaner		& 0 & 0 & 0.369 & 0.229 & 0.123 \\
+Amerkianische Ureinwohner	& 0 & 0 & 0.461 & 0.228 & 0.160 \\
+Andere 				& 0 & 0 & 0.367 & 0.127 & 0.076 \\
+
+0-2
+Weiss 				& 0 & 0 & 0.288 & 0.131 & 0.077 \\
+Afroamerikaner 			& 0 & 0 & 0.367 & 0.182 & 0.111 \\
+Asiaten				& 0 & 0 & 0.006 & 0.001 & 0.000 \\
+Latinoamerikaner		& 0 & 0 & 0.265 & 0.150 & 0.058 \\
+Amerkianische Ureinwohner	& 0 & 0 & 0.429 & 0.158 & 0.058 \\
+Andere 				& 0 & 0 & 0.225 & 0.081 & 0.037 \\
+
+0-3
+Weiss                           & 0 & 0 & 0.157 & 0.080 & 0.030 \\
+Afroamerikaner                  & 0 & 0 & 0.259 & 0.106 & 0.049 \\
+Asiaten                         & 0 & 0 & 0.002 & 0.000 & 0.000 \\
+Latinoamerikaner                & 0 & 0 & 0.140 & 0.081 & 0.018 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.278 & 0.097 & 0.021 \\
+Andere                          & 0 & 0 & 0.116 & 0.052 & 0.019 \\
+
+1-0
+Weiss                           & 0 & 0 & 0.441 & 0.367 & 0.231 \\
+Afroamerikaner                  & 0 & 0 & 0.618 & 0.300 & 0.152 \\
+Asiaten                         & 0 & 0 & 0.485 & 0.117 & 0.331 \\
+Latinoamerikaner                & 0 & 0 & 0.467 & 0.349 & 0.317 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.706 & 0.114 & 0.302 \\
+Andere                          & 0 & 0 & 0.614 & 0.362 & 0.200 \\
+
+1-1
+Weiss                           & 0 & 0 & 0.229 & 0.364 & 0.216 \\
+Afroamerikaner                  & 0 & 0 & 0.604 & 0.313 & 0.304 \\
+Asiaten                         & 0 & 0 & 0.073 & 0.010 & 0.016 \\
+Latinoamerikaner                & 0 & 0 & 0.475 & 0.298 & 0.191 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.170 & 0.158 & 0.361 \\
+Andere                          & 0 & 0 & 0.325 & 0.363 & 0.279 \\
+
+1-2
+Weiss                           & 0 & 0 & 0.279 & 0.365 & 0.222 \\
+Afroamerikaner                  & 0 & 0 & 0.300 & 0.355 & 0.303 \\
+Asiaten                         & 0 & 0 & 0.022 & 0.003 & 0.001 \\
+Latinoamerikaner                & 0 & 0 & 0.295 & 0.240 & 0.047 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.143 & 0.292 & 0.294 \\
+Andere                          & 0 & 0 & 0.299 & 0.346 & 0.170 \\
+
+1-3
+Weiss                           & 0 & 0 & 0.323 & 0.343 & 0.148 \\
+Afroamerikaner                  & 0 & 0 & 0.327 & 0.276 & 0.164 \\
+Asiaten                         & 0 & 0 & 0.007 & 0.000 & 0.001 \\
+Latinoamerikaner                & 0 & 0 & 0.210 & 0.108 & 0.012 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.259 & 0.292 & 0.106 \\
+Andere                          & 0 & 0 & 0.318 & 0.213 & 0.065 \\
+
+2-0
+Weiss                           & 0 & 0 & 0.633 & 0.500 & 0.243 \\
+Afroamerikaner                  & 0 & 0 & 0.769 & 0.432 & 0.245 \\
+Asiaten                         & 0 & 0 & 0.578 & 0.587 & 0.573 \\
+Latinoamerikaner                & 0 & 0 & 0.597 & 0.547 & 0.343 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.761 & 0.105 & 0.264 \\
+Andere                          & 0 & 0 & 0.692 & 0.507 & 0.210 \\
+
+2-1
+Weiss                           & 0 & 0 & 0.509 & 0.365 & 0.300 \\
+Afroamerikaner                  & 0 & 0 & 0.797 & 0.261 & 0.286 \\
+Asiaten                         & 0 & 0 & 0.530 & 0.284 & 0.446 \\
+Latinoamerikaner                & 0 & 0 & 0.595 & 0.362 & 0.394 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.277 & 0.118 & 0.337 \\
+Andere                          & 0 & 0 & 0.567 & 0.371 & 0.361 \\
+
+2-2
+Weiss                           & 0 & 0 & 0.202 & 0.361 & 0.409 \\
+Afroamerikaner                  & 0 & 0 & 0.324 & 0.289 & 0.312 \\
+Asiaten                         & 0 & 0 & 0.131 & 0.032 & 0.015 \\
+Latinoamerikaner                & 0 & 0 & 0.407 & 0.356 & 0.344 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.047 & 0.216 & 0.379 \\
+Andere                          & 0 & 0 & 0.277 & 0.351 & 0.504 \\
+
+2-3
+Weiss                           & 0 & 0 & 0.251 & 0.403 & 0.425 \\
+Afroamerikaner                  & 0 & 0 & 0.247 & 0.329 & 0.343 \\
+Asiaten                         & 0 & 0 & 0.041 & 0.012 & 0.002 \\
+Latinoamerikaner                & 0 & 0 & 0.352 & 0.265 & 0.069 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.161 & 0.298 & 0.338 \\
+Andere                          & 0 & 0 & 0.285 & 0.427 & 0.441 \\
+
+3-0
+Weiss                           & 0 & 0 & 0.720 & 0.568 & 0.290 \\
+Afroamerikaner                  & 0 & 0 & 0.801 & 0.588 & 0.274 \\
+Asiaten                         & 0 & 0 & 0.603 & 0.596 & 0.603 \\
+Latinoamerikaner                & 0 & 0 & 0.621 & 0.571 & 0.476 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.796 & 0.569 & 0.482 \\
+Andere                          & 0 & 0 & 0.737 & 0.579 & 0.279 \\
+
+3-1
+Weiss                           & 0 & 0 & 0.682 & 0.426 & 0.323 \\
+Afroamerikaner                  & 0 & 0 & 0.822 & 0.565 & 0.317 \\
+Asiaten                         & 0 & 0 & 0.577 & 0.596 & 0.618 \\
+Latinoamerikaner                & 0 & 0 & 0.613 & 0.561 & 0.575 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.606 & 0.085 & 0.310 \\
+Andere                          & 0 & 0 & 0.729 & 0.562 & 0.471 \\
+
+3-2
+Weiss                           & 0 & 0 & 0.332 & 0.367 & 0.557 \\
+Afroamerikaner                  & 0 & 0 & 0.573 & 0.272 & 0.293 \\
+Asiaten                         & 0 & 0 & 0.520 & 0.423 & 0.602 \\
+Latinoamerikaner                & 0 & 0 & 0.572 & 0.374 & 0.479 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.036 & 0.174 & 0.346 \\
+Andere                          & 0 & 0 & 0.530 & 0.381 & 0.574 \\
+
+3-3
+Weiss                           & 0 & 0 & 0.196 & 0.372 & 0.546 \\
+Afroamerikaner                  & 0 & 0 & 0.159 & 0.295 & 0.382 \\
+Asiaten                         & 0 & 0 & 0.285 & 0.114 & 0.127 \\
+Latinoamerikaner                & 0 & 0 & 0.271 & 0.365 & 0.418 \\
+Amerkianische Ureinwohner       & 0 & 0 & 0.087 & 0.257 & 0.389 \\
+Andere                          & 0 & 0 & 0.252 & 0.372 & 0.575 \\
+
+
+
+

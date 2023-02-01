@@ -114,17 +114,17 @@ def get_test_data(data_type):
     if data_type == 'norace':
         for key, value in data.items():
             for v in value:
-                v.pop(4)
-                v.pop(4)
-                v.pop(4)
-                v.pop(4)
-                v.pop(4)
-                v.pop(4)
+                v.pop(3)
+                v.pop(3)
+                v.pop(3)
+                v.pop(3)
+                v.pop(3)
+                v.pop(3)
         return data
     if data_type == 'nogender':
         for key, value in data.items():
             for v in value:
-                v.pop(10)
+                v.pop(9)
         return data
 
     return data
@@ -133,7 +133,7 @@ def get_test_data(data_type):
 def init_logfile():
     date = datetime.now()
     time_suffix = str(date.year) + '-' + str(date.month) + '-' + str(date.day) + '-' + str(date.hour) + '-' + str(date.minute) + '-' + str(date.second)
-    filename = '../results/compas_results_baseline_{}.txt'.format(time_suffix)
+    filename = '../results/compas_results_norace_{}.txt'.format(time_suffix)
     with open(filename, 'w') as f:
         f.write(time_suffix + '\n')
     return filename
@@ -154,9 +154,9 @@ def log_predictions(filename, preds):
 start_time = datetime.now()
 
 models = [
-    {'model': tf.keras.models.load_model('./models/baseline'), 'model_type': 'baseline'}#,
-    #{'model': tf.keras.models.load_model('./models/norace'), 'model_type': 'norace'},
-    #{'model': tf.keras.models.load_model('./models/nogender'), 'model_type': 'nogender'}
+    #{'model': tf.keras.models.load_model('./models/baseline'), 'model_type': 'baseline'}#,
+    #{'model': tf.keras.models.load_model('./models/norace'), 'model_type': 'norace'}#,
+    {'model': tf.keras.models.load_model('./models/nogender'), 'model_type': 'nogender'}
 ]
 
 fn = init_logfile()
