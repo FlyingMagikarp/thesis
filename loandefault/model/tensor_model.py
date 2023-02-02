@@ -4,15 +4,12 @@ from sklearn.model_selection import train_test_split
 
 print("TensorFlow version:", tf.__version__)
 
-#df = pd.read_csv('./data/clean_data.csv')
-#df = pd.read_csv('./data/propublica_data_for_fairml.csv')
-#df = pd.read_csv('../data/propublic_double.csv')
-df = pd.read_csv('../data/double_data_with_caucasian.csv')
+df = pd.read_csv('../data/train_clean.csv')
 print(df.head())
 print(df.dtypes)
 
-z = df.pop('score_factor')
-y = df.pop('Two_yr_Recidivism')
+#df = df.drop('Female', axis=1)
+y = df.pop('target')
 X = df
 
 X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.2, random_state=129)
@@ -22,7 +19,7 @@ X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.2, random_sta
 
 model = tf.keras.models.Sequential()
 
-model.add(tf.keras.layers.Dense(11, activation='relu', input_shape=(11,)))
+model.add(tf.keras.layers.Dense(17, activation='relu', input_shape=(17,)))
 
 model.add(tf.keras.layers.Dense(40, activation='relu'))
 model.add(tf.keras.layers.Dense(40, activation='relu'))
@@ -42,7 +39,7 @@ val_dataset = tf.data.Dataset.from_tensor_slices((X_test, y_test))
 val_dataset = val_dataset.batch(64)
 
 
-model.fit(X_train, y_train, epochs=33, batch_size=10, validation_data=val_dataset)
+model.fit(X_train, y_train, epochs=33, batch_size=64, validation_data=val_dataset)
 results_first = model.evaluate(X_test,  y_test, verbose=2)
 print(results_first)
 
