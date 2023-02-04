@@ -5,4 +5,5 @@
 todo.txt~
 *.*~
 loandefault/data/
-compas/model/*
+compas/models/*
+compas/model/models/*
