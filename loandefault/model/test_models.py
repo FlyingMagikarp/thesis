@@ -15,6 +15,54 @@ def set_sex(dlist, sex):
     return dlist
 
 
+def set_job_stab(dlist, jstab):
+    for i in dlist:
+        i[-8] = jstab
+    return dlist
+
+
+def set_year(dlist, year):
+    for i in dlist:
+        i[-9] = year
+    return dlist
+
+
+def set_payment_timing(dlist, payment_timing):
+    for i in dlist:
+        i[-10] = payment_timing
+    return dlist
+
+
+def set_loan_size(dlist, loan_size):
+    for i in dlist:
+        i[-11] = loan_size
+    return dlist
+
+
+def set_income(dlist, income):
+    for i in dlist:
+        i[-12] = income
+    return dlist
+
+
+def set_age(dlist, age):
+    for i in dlist:
+        i[-13] = age
+    return dlist
+
+
+def set_education(dlist, edu):
+    for i in dlist:
+        i[-14] = edu
+    return dlist
+
+
+def set_rent(dlist, rent):
+    for i in dlist:
+        i[-15] = rent
+    return dlist
+
+
 # minority,sex,         == 2
 # rent,education,age,   == 3
 # income,loan_size,     == 2
@@ -22,12 +70,48 @@ def set_sex(dlist, sex):
 # job_stability,        == 1
 # zip0,zip1,zip2,zip3,  == 4
 # occupation0,occupation1,occupation2,  == 3
-def get_test_data(data_type):
+def get_test_data():
     data = {}
 
-    data['basic'] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    data['data_rent0'] = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0]]
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0],
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0],
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0]]
+
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0],
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0],
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0],
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0],
+
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1],
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1],
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1],
+                         #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1]]
+
+    #data['data_rent1'] = [[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0],
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0],
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0],
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0],
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0],
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0],
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0],
+
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1],
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1],
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1],
+                         #[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1]]
 
     return data
+
+
+data_education = [30, 40, 50, 60, 70, 80]
+data_age = [18, 28, 38, 48, 58, 68]
+data_income = [70000, 100000, 150000, 200000]
+data_loan_size = [200, 400, 800, 1000, 5000, 10000]
+data_payment_timing = [1, 2, 3, 4]
+data_job_stability = [40, 50, 60, 70, 80, 90, 100]
 
 
 def init_logfile(g):
@@ -45,9 +129,24 @@ def log_string(filename, string):
         f.write('\n')
 
 
-def log_predictions(filename, preds, key, i, j):
+def log_predictions(filename, preds, key, minority, sex, education, age, income, loan_size, payment_timing, job_stability):
+    tmp_str = ''
+    for i in preds:
+        tmp_str+= str(round(i[0], 3)) + ' : '
     with open(filename, 'a') as f:
-        f.write(key + ' & ' + str(i) + ' & ' + str(j) + ' & ' + str(round(preds[0], 3)) + ' \\\\')
+        f.write(
+            '{0} & {1} & {2} & {3} & {4} & {5} & {6} & {7} & {8} & {9} \\\\'.format(key,
+                                                                                    str(minority),
+                                                                                    str(sex),
+                                                                                    str(education),
+                                                                                    str(age),
+                                                                                    str(income),
+                                                                                    str(loan_size),
+                                                                                    str(payment_timing),
+                                                                                    str(job_stability),
+                                                                                    str(tmp_str)
+                                                                                    )
+        )
         f.write('\n')
 
 start_time = datetime.now()
@@ -56,28 +155,39 @@ models = [
     {'model': tf.keras.models.load_model('./models/baseline'), 'model_type': 'baseline'},
 ]
 
-for g in range(2):
-    fn = init_logfile(g)
-    log_string(fn, 'Gender: '+str(g))
-    for i in range(2):
-        log_string(fn, '#'+str(i)+'-'+str(j)+'#')
-        for model_info in models:
-            model = model_info['model']
-            type = model_info['model_type']
+for gender in range(2):
+    fn = init_logfile(gender)
+    log_string(fn, 'Gender: '+str(gender))
+    for minority in range(2):
+        log_string(fn, 'Minority: '+str(minority))
+        for education in data_education:
+            for age in data_age:
+                for income in data_income:
+                    for loan_size in data_loan_size:
+                        for payment_timing in data_payment_timing:
+                            for job_stab in data_job_stability:
 
-            data = get_test_data(type)
+                                for model_info in models:
+                                    model = model_info['model']
 
-            print('Model: ', type)
-            print('##########')
-            for key, value in data.items():
-                print(key)
-                value = set_minority(value, i)
-                value = set_sex(value, g)
-                print(value)
-                predictions = model.predict(value)
-                log_predictions(fn, predictions, key, i, g)
-                print(model.predict(value))
-            print('##########')
+                                    data = get_test_data()
+
+                                    print('##########')
+                                    for key, value in data.items():
+                                        print(key)
+                                        value = set_sex(value, gender)
+                                        value = set_minority(value, minority)
+                                        value = set_education(value, education)
+                                        value = set_age(value, age)
+                                        value = set_income(value, income)
+                                        value = set_loan_size(value, loan_size)
+                                        value = set_payment_timing(value, payment_timing)
+                                        value = set_job_stab(value, job_stab)
+                                        print(value)
+                                        predictions = model.predict(value)
+                                        log_predictions(fn, predictions, key, gender, minority, education, age, income, loan_size, payment_timing, job_stab)
+                                        print(model.predict(value))
+                                    print('##########')
 
 print('Done analysis')
 print('Time:')
