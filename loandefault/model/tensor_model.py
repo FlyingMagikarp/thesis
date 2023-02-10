@@ -29,7 +29,8 @@ model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0
 model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
 model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
 model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
-model.add(tf.keras.layers.Dense(40, activation='relu'))
+model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
+#model.add(tf.keras.layers.Dense(40, activation='relu'))
 
 model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
 
@@ -39,7 +40,7 @@ val_dataset = tf.data.Dataset.from_tensor_slices((X_val, y_val))
 val_dataset = val_dataset.batch(64)
 
 
-model.fit(X, y, epochs=33, batch_size=64, validation_data=val_dataset)
+model.fit(X, y, epochs=10, batch_size=64, validation_data=val_dataset)
 results_first = model.evaluate(X_val, y_val, verbose=2)
 print(results_first)
 

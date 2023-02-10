@@ -9,9 +9,9 @@ def set_minority(dlist, minority):
     return dlist
 
 
-def set_sex(dlist, sex):
+def set_gender(dlist, gender):
     for i in dlist:
-        i[1] = sex
+        i[1] = gender
     return dlist
 
 
@@ -142,7 +142,7 @@ for gender in range(2):
             print('##########')
             for key, value in data.items():
                 print(key)
-                value = set_sex(value, gender)
+                value = set_gender(value, gender)
                 value = set_minority(value, minority)
                 print(value)
                 predictions = model.predict(value)
