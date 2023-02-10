@@ -43,7 +43,7 @@ model.fit(X_train, y_train, epochs=30, batch_size=64, validation_data=val_datase
 results_first = model.evaluate(X_test,  y_test, verbose=2)
 print(results_first)
 
-model.save('./models/baseline')
+model.save('./models/nominority')
 
 
 
