@@ -21,6 +21,12 @@ def drop_extra(dlist):
     return dlist
 
 
+def drop_minority(dlist):
+    dlist.pop(0)
+
+    return dlist
+
+
 # minority,sex,         == 2
 # rent,education,age,   == 3
 # income,loan_size,     == 2
@@ -41,7 +47,7 @@ def get_test_data():
 def init_logfile(g):
     date = datetime.now()
     time_suffix = str(date.year) + '-' + str(date.month) + '-' + str(date.day) + '-' + str(date.hour) + '-' + str(date.minute) + '-' + str(date.second)
-    filename = '../results/loan_results_{}.txt'.format(str(g)+'_'+time_suffix)
+    filename = '../results/loan_results_balanced_{}.txt'.format(str(g)+'_'+time_suffix)
     with open(filename, 'w') as f:
         f.write(time_suffix + '\n')
     return filename
@@ -67,8 +73,10 @@ def log_predictions(filename, preds, minority):
 start_time = datetime.now()
 
 models = [
-    {'model': tf.keras.models.load_model('./models/baseline'), 'model_type': 'baseline'},
+    #{'model': tf.keras.models.load_model('./models/baseline'), 'model_type': 'baseline'},
     #{'model': tf.keras.models.load_model('./models/baseline_noextra'), 'model_type': 'baseline noextra'},
+    #{'model': tf.keras.models.load_model('./models/nominority_noextra'), 'model_type': 'nominority noextra'},
+    {'model': tf.keras.models.load_model('./models/balanced_noextra'), 'model_type': 'balanced'},
 ]
 
 for minority in range(2):
@@ -82,7 +90,8 @@ for minority in range(2):
         print('##########')
         for value in data:
             value = set_minority(value, minority)
-            #value = drop_extra(value)
+            #value = drop_minority(value)
+            value = drop_extra(value)
             print(value)
             predictions = model.predict([value])
             log_predictions(fn, predictions, minority)
