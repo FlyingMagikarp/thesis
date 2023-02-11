@@ -24,8 +24,8 @@ results = []
 results_big_diff = []
 print(errors_idx[-1])
 for idx in errors_idx:
-    if int(idx) > 10000:
-        break
+    #if int(idx) > 10000:
+        #break
     tmp_target = y_val.loc[[idx]].values.tolist()[0]
 
     tmp_arr = X_val.loc[[idx]].values.tolist()[0]
@@ -39,12 +39,13 @@ for idx in errors_idx:
 
     results.append([idx, pred_maj[0][0], pred_min[0][0]])
     print(idx, pred_maj, pred_min)
-    if abs(pred_maj[0] - pred_min) > 0.05:
+    if abs(pred_maj[0] - pred_min) > 0.04:
         results_big_diff.append([idx, pred_maj[0][0], pred_min[0][0], abs(pred_maj[0][0] - pred_min[0][0])])
 
+tmp_sorted = sorted(results_big_diff, key=lambda x: x[-1], reverse=True)
 with open("./test.csv", "w") as f:
     writer = csv.writer(f)
-    writer.writerows(results_big_diff)
+    writer.writerows(tmp_sorted)
 
 # tmp_sorted = sorted(results_big_diff, key=lambda x: x[-1])
 print('Done analysis')

@@ -14,6 +14,17 @@ def set_gender(dlist, gender):
         i[1] = gender
     return dlist
 
+def drop_extra(dlist):
+    for i in dlist:
+        i.pop(-1)
+        i.pop(-1)
+        i.pop(-1)
+        i.pop(-1)
+        i.pop(-1)
+        i.pop(-1)
+        i.pop(-1)
+
+    return dlist
 
 # minority,sex,         == 2
 # rent,education,age,   == 3
@@ -115,7 +126,7 @@ def log_string(filename, string):
 def log_predictions(filename, preds, key, minority, sex):
     tmp_str = ''
     for i in preds:
-        tmp_str += str(round(i[0], 3)) + ' : '
+        tmp_str += str(round(i[0], 6)) + ' : '
     with open(filename, 'a') as f:
         f.write(
             '{0} & {1} & {2} & {3} \\\\'.format(key, str(minority), str(sex), tmp_str)
@@ -126,7 +137,8 @@ def log_predictions(filename, preds, key, minority, sex):
 start_time = datetime.now()
 
 models = [
-    {'model': tf.keras.models.load_model('./models/baseline'), 'model_type': 'baseline'},
+    #{'model': tf.keras.models.load_model('./models/baseline'), 'model_type': 'baseline'},
+    {'model': tf.keras.models.load_model('./models/baseline_noextra'), 'model_type': 'baseline noextra'},
 ]
 
 for gender in range(2):
@@ -144,6 +156,7 @@ for gender in range(2):
                 print(key)
                 value = set_gender(value, gender)
                 value = set_minority(value, minority)
+                value = drop_extra(value)
                 print(value)
                 predictions = model.predict(value)
                 log_predictions(fn, predictions, key, gender, minority)

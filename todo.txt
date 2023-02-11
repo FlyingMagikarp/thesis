@@ -8,3 +8,7 @@ broad todos
     - new model without minority
 
 - SHAP explainer for all models
+
+
+Idee
+not many minority entries, take those and check results
