@@ -1,4 +1,4 @@
-Baseline
+BASELINE
 
 MALE
 Overall AVG
@@ -19,9 +19,9 @@ Black AVG
 
 FEMALE
 Overall AVG
-11.055 0.345
-8.896 0.278
-6.338 0.198
+0.345
+0.278
+0.198
 
 White AVG
 0.247
@@ -32,3 +32,80 @@ Black AVG
 0.444
 0.243
 0.179
+
+
+
+EXP 1 NO RACE
+
+MALE
+0.576
+0.369
+0.268
+
+FEMALE
+0.431
+0.316
+0.211
+
+
+
+EXP 1 NO GENDER
+Overall WHITE AVG
+0.359
+0.296
+0.223
+
+White AVG
+0.187
+0.173
+0.14
+
+Overall BLACK AVG
+0.516
+0.284
+0.21
+
+Black AVG
+0.247
+0.16
+0.126
+
+
+
+
+
+
+BALANCED
+
+MALE
+Overall AVG
+0.623
+0.369
+0.286
+
+White AVG
+0.558
+0.354
+0.273
+
+Black AVG
+0.588
+0.385
+0.299
+
+
+FEMALE
+Overall AVG
+0.351
+0.300
+0.254
+
+White AVG
+0.256
+0.329
+0.256
+
+Black AVG
+0.445
+0.272
+0.252
