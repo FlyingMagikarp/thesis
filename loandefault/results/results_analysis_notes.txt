@@ -1,0 +1,28 @@
+BASELINE
+
+Overall AVG
+0.528
+
+Majority AVG
+0.47
+
+Minority AVG
+0.587
+
+
+
+EXP 1 NO RACE
+0.576
+
+
+BALANCED
+
+Overall AVG
+0.623
+
+Majority AVG
+0.558
+
+Minority AVG
+0.588
+
