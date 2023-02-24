@@ -7,14 +7,14 @@ import seaborn as sns
 d = {'Model': [
         'Baseline',
         'Baseline',
-        'Ohne Ethnik',
-        'Ohne Ethnik',
+        'Ohne Ethnie',
+        'Ohne Ethnie',
         'Ohne Geschlecht ',
         'Ohne Geschlecht ',
         'Künstlich ergänzte Daten',
         'Künstlich ergänzte Daten'
     ],
-    'Metric': [
+    'Metrik': [
         'Accuracy',
         'Recall',
         'Accuracy',
@@ -39,23 +39,22 @@ d = {'Model': [
 df = pd.DataFrame(data=d)
 
 
-plt.figure(figsize=(10,6))
-# ax = sns.barplot(data=df, x='Value', y='Model', hue="Metric", orient='h').set(title='Übersicht Metriken COMPAS')
-ax = sns.barplot(data=df, x='Model', y='Value', hue="Metric", orient='v').set(title='Übersicht Metriken COMPAS')
+#plt.figure(figsize=(10,6))
+#ax = sns.barplot(data=df, x='Model', y='Value', hue="Metrik", orient='v').set(title='Übersicht Metriken COMPAS')
 #plt.ylabel('Modell', rotation=90)
-plt.show()
+#plt.show()
 
 
 
 d = {'Model': [
         'Baseline',
         'Baseline',
-        'Ohne Ethnik',
-        'Ohne Ethnik',
+        'Ohne Ethnie',
+        'Ohne Ethnie',
         'Künstlich ergänzte Daten',
         'Künstlich ergänzte Daten'
     ],
-    'Metric': [
+    'Metrik': [
         'Accuracy',
         'Recall',
         'Accuracy',
@@ -76,8 +75,7 @@ d = {'Model': [
 df = pd.DataFrame(data=d)
 
 plt.figure(figsize=(10,6))
-ax = sns.barplot(data=df, x='Model', y='Value', hue="Metric", orient='v').set(title='Übersicht Metriken Kreditausfälle')
-#plt.ylabel('Modell', rotation=90)
+ax = sns.barplot(data=df, x='Model', y='Value', hue="Metrik", orient='v').set(title='Übersicht Metriken Kreditausfälle')
 plt.show()
 
 
