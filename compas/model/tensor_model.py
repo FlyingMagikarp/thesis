@@ -6,8 +6,7 @@ print("TensorFlow version:", tf.__version__)
 
 #df = pd.read_csv('./data/clean_data.csv')
 #df = pd.read_csv('./data/propublica_data_for_fairml.csv')
-#df = pd.read_csv('../data/propublic_double.csv')
-df = pd.read_csv('../data/double_data_with_caucasian.csv')
+df = pd.read_csv('../data/data_with_caucasian.csv')
 print(df.head())
 print(df.dtypes)
 

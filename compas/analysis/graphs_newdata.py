@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('../data/propublic_double.csv')
+df = pd.read_csv('../data/data_with_caucasian.csv')
 
 print(len(df))
 print('Male', df.loc[df['Female'] == 0].shape[0])

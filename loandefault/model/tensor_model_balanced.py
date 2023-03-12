@@ -10,24 +10,10 @@ print(df.dtypes)
 #zip0,zip1,zip2,zip3,occupation0,occupation1,occupation2
 df_val = pd.read_csv('../data/balanced_data_test.csv')
 
-z = df_val.pop('zip0')
-z = df_val.pop('zip1')
-z = df_val.pop('zip2')
-z = df_val.pop('zip3')
-z = df_val.pop('occupation0')
-z = df_val.pop('occupation1')
-z = df_val.pop('occupation2')
 
 y_val = df_val.pop('target')
 X_val = df_val
 
-z = df.pop('zip0')
-z = df.pop('zip1')
-z = df.pop('zip2')
-z = df.pop('zip3')
-z = df.pop('occupation0')
-z = df.pop('occupation1')
-z = df.pop('occupation2')
 
 y = df.pop('target')
 X = df
@@ -38,15 +24,15 @@ model = tf.keras.models.Sequential()
 
 model.add(tf.keras.layers.Dense(17, activation='relu', input_shape=(10,)))
 
-model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
-model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
-model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
-model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
+model.add(tf.keras.layers.Dense(40, activation='relu'))
+model.add(tf.keras.layers.Dense(40, activation='relu'))
+model.add(tf.keras.layers.Dense(40, activation='relu'))
+model.add(tf.keras.layers.Dense(40, activation='relu'))
 
-model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
-model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
-model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
-model.add(tf.keras.layers.Dense(40, activation=tf.keras.layers.LeakyReLU(alpha=0.01)))
+model.add(tf.keras.layers.Dense(40, activation='relu'))
+model.add(tf.keras.layers.Dense(40, activation='relu'))
+model.add(tf.keras.layers.Dense(40, activation='relu'))
+model.add(tf.keras.layers.Dense(40, activation='relu'))
 
 model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
 
